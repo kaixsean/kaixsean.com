@@ -13,15 +13,17 @@ export default function Home({ posts }) {
         <ul className="grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
-            const { slug, date, title, summary, tags } = post
+            const { slug, date, title, summary, tags, images } = post
             return (
-              <li key={slug} className="py-12">
+              <li key={slug} className="py-3">
                 <article>
-                  <div>Image</div>
+                  <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+                    <img src={images} className="" />
+                  </div>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <div className="space-y-5 xl:col-span-3">
+                    <div className="space-y-5 xl:col-span-4">
                       <div className="space-y-2">
-                        <div>
+                        <div className="mt-5">
                           <div className="flex flex-wrap">
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
@@ -37,7 +39,12 @@ export default function Home({ posts }) {
                           </h2>
                         </div>
                         <div className="prose line-clamp-2 max-w-none">
-                          <Link href={`/blog/${slug}`} className="no-underline text-gray-500 dark:text-gray-400">{summary}</Link>
+                          <Link
+                            href={`/blog/${slug}`}
+                            className="text-gray-500 no-underline dark:text-gray-400"
+                          >
+                            {summary}
+                          </Link>
                         </div>
                         <dl>
                           <dt className="sr-only">Published on</dt>
