@@ -15,7 +15,7 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags, images } = post
             return (
-              <li key={slug} className="py-3">
+              <li key={slug} className="py-3 group cursor-pointer">
                 <article>
                   <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
                     <img src={images} className="" />
@@ -29,23 +29,23 @@ export default function Home({ posts }) {
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                          <h2 className="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white">
                             <Link
                               href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
+                              className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
                             </Link>
                           </h2>
                         </div>
-                        <div className="prose line-clamp-2 max-w-none">
+                        <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
                           <Link
                             href={`/blog/${slug}`}
                             className="text-gray-500 no-underline dark:text-gray-400"
                           >
                             {summary}
                           </Link>
-                        </div>
+                        </p>
                         <dl>
                           <dt className="sr-only">Published on</dt>
                           <dd className="truncate text-sm font-medium leading-6 text-gray-500 dark:text-gray-400">
