@@ -46,9 +46,9 @@ export default function Home({ posts }) {
                             {summary}
                           </Link>
                         </p>
-                        <dl>
+                        <dl className="mt-3 flex items-end text-gray-500 dark:text-gray-400">
                           <dt className="sr-only">Published on</dt>
-                          <dd className="truncate text-sm font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          <dd className="truncate text-sm">
                             <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                           </dd>
                         </dl>
