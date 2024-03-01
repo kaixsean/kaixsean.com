@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import Image from 'next/image'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 
@@ -15,10 +16,17 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags, images } = post
             return (
-              <li key={slug} className="py-3 group cursor-pointer">
+              <li key={slug} className="group cursor-pointer py-3">
                 <article>
                   <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-                    <img src={images} className="object-cover transition-all" sizes="(max-width: 768px) 30vw, 33vw" />
+                    <Image
+                      src={Array.isArray(images) ? images[0] : ''}
+                      width={320}
+                      height={320}
+                      alt={title}
+                      className="object-cover transition-all"
+                      sizes="(max-width: 768px) 30vw, 33vw"
+                    />
                   </div>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <div className="space-y-5 xl:col-span-4">
@@ -29,7 +37,7 @@ export default function Home({ posts }) {
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
-                          <h2 className="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white">
+                          <h2 className="mt-2 text-lg font-semibold leading-snug tracking-tight dark:text-white">
                             <Link
                               href={`/blog/${slug}`}
                               className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900"

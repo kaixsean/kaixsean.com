@@ -9,6 +9,7 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import Image from 'next/image'
 import tagData from 'app/tag-data.json'
 
 interface PaginationProps {
@@ -32,7 +33,10 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
     <div className="mt-10 flex items-center justify-center">
       <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm">
         {!prevPage && (
-          <button className="relative inline-flex items-center gap-1 rounded-l-md border border-gray-300 bg-white px-3 py-2 pr-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300" disabled={!prevPage}>
+          <button
+            className="relative inline-flex items-center gap-1 rounded-l-md border border-gray-300 bg-white px-3 py-2 pr-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+            disabled={!prevPage}
+          >
             <span>Previous</span>
           </button>
         )}
@@ -41,17 +45,30 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
             rel="prev"
           >
-            <button className="relative inline-flex items-center gap-1 rounded-l-md border border-gray-300 bg-white px-3 py-2 pr-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300" disabled={!prevPage}>Previous</button>
+            <button
+              className="relative inline-flex items-center gap-1 rounded-l-md border border-gray-300 bg-white px-3 py-2 pr-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+              disabled={!prevPage}
+            >
+              Previous
+            </button>
           </Link>
         )}
         {!nextPage && (
-          <button className="relative inline-flex items-center gap-1 rounded-r-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300" disabled={!nextPage}>
+          <button
+            className="relative inline-flex items-center gap-1 rounded-r-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+            disabled={!nextPage}
+          >
             Next
           </button>
         )}
         {nextPage && (
           <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
-            <button className="relative inline-flex items-center gap-1 rounded-r-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300" disabled={!nextPage}>Next</button>
+            <button
+              className="relative inline-flex items-center gap-1 rounded-r-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+              disabled={!nextPage}
+            >
+              Next
+            </button>
           </Link>
         )}
       </nav>
@@ -89,8 +106,11 @@ export default function ListLayoutWithTags({
                   <li key={path} className="group cursor-pointer py-3">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-                        <img
-                          src={images}
+                        <Image
+                          src={Array.isArray(images) ? images[0] : ''}
+                          width={320}
+                          height={320}
+                          alt={title}
                           className="object-cover transition-all"
                           sizes="(max-width: 768px) 30vw, 33vw"
                         />
