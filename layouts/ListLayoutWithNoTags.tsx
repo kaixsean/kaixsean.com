@@ -2,7 +2,6 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { slug } from 'github-slugger'
 import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
@@ -101,19 +100,20 @@ export default function ListLayoutWithTags({
           <div>
             <ul className="grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
               {displayPosts.map((post) => {
-                const { path, date, title, summary, tags, images } = post
+                const { slug, path, date, title, summary, tags, images } = post
                 return (
                   <li key={path} className="group cursor-pointer py-3">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-                        <Image
-                          src={Array.isArray(images) ? images[0] : ''}
-                          width={320}
-                          height={320}
-                          alt={title}
-                          className="object-cover transition-all"
-                          sizes="(max-width: 768px) 30vw, 33vw"
-                        />
+                        <Link href={`/${slug}`} className="relative block aspect-video">
+                          <Image
+                            src={Array.isArray(images) ? images[0] : ''}
+                            alt={title}
+                            className="object-cover transition-all"
+                            sizes="(max-width: 768px) 30vw, 33vw"
+                            fill
+                          />
+                        </Link>
                       </div>
                       <div className="space-y-2">
                         <div className="mt-5">
@@ -122,7 +122,7 @@ export default function ListLayoutWithTags({
                           </div>
                           <h2 className="mt-2 text-lg font-semibold leading-snug tracking-tight dark:text-white">
                             <Link
-                              href={`/${path}`}
+                              href={`/${slug}`}
                               className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
@@ -131,7 +131,7 @@ export default function ListLayoutWithTags({
                         </div>
                         <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
                           <Link
-                            href={`/blog/${slug}`}
+                            href={`/${slug}`}
                             className="text-gray-500 no-underline dark:text-gray-400"
                           >
                             {summary}
