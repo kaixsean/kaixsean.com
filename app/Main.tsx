@@ -19,14 +19,15 @@ export default function Home({ posts }) {
               <li key={slug} className="group cursor-pointer py-3">
                 <article>
                   <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-                    <Image
-                      src={Array.isArray(images) ? images[0] : ''}
-                      width={320}
-                      height={320}
-                      alt={title}
-                      className="object-cover transition-all"
-                      sizes="(max-width: 768px) 30vw, 33vw"
-                    />
+                    <Link href={`/blog/${slug}`} className="relative block aspect-video">
+                      <Image
+                        src={Array.isArray(images) ? images[0] : ''}
+                        alt={title}
+                        className="object-cover transition-all"
+                        sizes="(max-width: 768px) 30vw, 33vw"
+                        fill
+                      />
+                    </Link>
                   </div>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <div className="space-y-5 xl:col-span-4">
