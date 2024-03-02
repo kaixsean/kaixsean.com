@@ -19,7 +19,7 @@ export default function Home({ posts }) {
               <li key={slug} className="group cursor-pointer py-3">
                 <article>
                   <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-                    <Link href={`/blog/${slug}`} className="relative block aspect-video">
+                    <Link href={`/posts/${slug}`} className="relative block aspect-video">
                       <Image
                         src={Array.isArray(images) ? images[0] : ''}
                         alt={title}
@@ -40,7 +40,7 @@ export default function Home({ posts }) {
                           </div>
                           <h2 className="mt-2 text-lg font-semibold leading-snug tracking-tight dark:text-white">
                             <Link
-                              href={`/blog/${slug}`}
+                              href={`/posts/${slug}`}
                               className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
@@ -49,7 +49,7 @@ export default function Home({ posts }) {
                         </div>
                         <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
                           <Link
-                            href={`/blog/${slug}`}
+                            href={`/posts/${slug}`}
                             className="text-gray-500 no-underline dark:text-gray-400"
                           >
                             {summary}
@@ -77,7 +77,7 @@ export default function Home({ posts }) {
               <li key={slug} className="group cursor-pointer py-3">
                 <article>
                   <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-                    <Link href={`/blog/${slug}`} className="relative block aspect-video">
+                    <Link href={`/posts/${slug}`} className="relative block aspect-video">
                       <Image
                         src={Array.isArray(images) ? images[0] : ''}
                         alt={title}
@@ -98,7 +98,7 @@ export default function Home({ posts }) {
                           </div>
                           <h2 className="mt-2 text-lg font-semibold leading-snug tracking-tight dark:text-white">
                             <Link
-                              href={`/blog/${slug}`}
+                              href={`/posts/${slug}`}
                               className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
@@ -107,7 +107,7 @@ export default function Home({ posts }) {
                         </div>
                         <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
                           <Link
-                            href={`/blog/${slug}`}
+                            href={`/posts/${slug}`}
                             className="text-gray-500 no-underline dark:text-gray-400"
                           >
                             {summary}
@@ -131,7 +131,7 @@ export default function Home({ posts }) {
       {posts.length > MAX_DISPLAY && (
         <div className="mt-10 flex justify-center">
           <Link
-            href="/blog"
+            href="/posts"
             className="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
             aria-label="All posts"
           >
