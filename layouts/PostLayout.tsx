@@ -134,7 +134,10 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             </div>
           </footer>
           {siteMetadata.comments && (
-            <div className="divide-y divide-gray-100 py-6 transition-colors dark:divide-gray-800" id="comment">
+            <div
+              className="divide-y divide-gray-100 py-6 transition-colors dark:divide-gray-800"
+              id="comment"
+            >
               <Comments slug={slug} />
             </div>
           )}
