@@ -37,8 +37,8 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
     <SectionContainer>
       <ScrollTopAndComment />
       <article>
-        <div className="xl:divide-y xl:divide-gray-100 xl:dark:divide-gray-800">
-          <header className="pt-6 xl:pb-6">
+        <div className="divide-y divide-gray-100 dark:divide-gray-800">
+          <header className="pb-6 pt-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
@@ -133,6 +133,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               )}
             </div>
           </footer>
+          {siteMetadata.comments && (
+            <div className="divide-y divide-gray-100 py-6 transition-colors dark:divide-gray-800" id="comment">
+              <Comments slug={slug} />
+            </div>
+          )}
         </div>
       </article>
     </SectionContainer>
