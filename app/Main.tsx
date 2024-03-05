@@ -33,7 +33,7 @@ export default function Home({ posts }) {
                     <div className="space-y-5 xl:col-span-4">
                       <div className="space-y-2">
                         <div className="mt-5">
-                          <div className="flex flex-wrap">
+                          <div className="flex gap-3">
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
                             ))}
