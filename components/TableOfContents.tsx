@@ -1,6 +1,6 @@
 // ref: https://github.com/ekomenyong/kommy-mdx/blob/main/src/components/TOC.tsx
 
-"use client"
+'use client'
 
 import clsx from 'clsx'
 import GithubSlugger from 'github-slugger'
