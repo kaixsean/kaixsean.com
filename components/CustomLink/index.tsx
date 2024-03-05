@@ -1,3 +1,3 @@
-import CustomLink from "./CustomLink";
+import CustomLink from './CustomLink'
 
-export default CustomLink;
+export default CustomLink
