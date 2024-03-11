@@ -77,6 +77,20 @@ module.exports = () => {
         },
       ],
     },
+    async redirects() {
+      return [
+        {
+          source: '/blog',
+          destination: '/posts', // Matched parameters can be used in the destination
+          permanent: true,
+        },
+        {
+          source: '/blog/:slug',
+          destination: '/posts/:slug', // Matched parameters can be used in the destination
+          permanent: true,
+        },
+      ]
+    },
     async headers() {
       return [
         {
