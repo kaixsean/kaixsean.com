@@ -6,7 +6,7 @@ const siteMetadata = {
   description: "Kaix's personal blog",
   language: 'zh-tw',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://kaixsean.com',
+  siteUrl: 'https://www.kaixsean.com',
   siteRepo: 'https://github.com/kaixsean/kaixsean.com',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
