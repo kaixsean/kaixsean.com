@@ -6,10 +6,10 @@ const siteMetadata = {
   description: "Kaix's personal blog",
   language: 'zh-tw',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://kaixsean.com',
+  siteUrl: 'https://www.kaixsean.com',
   siteRepo: 'https://github.com/kaixsean/kaixsean.com',
-  siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.png',
+  siteLogo: '/static/images/kaix.png',
+  socialBanner: '/static/images/kaix.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'me@kaixsean.com',
   github: 'https://github.com/kaixsean',
@@ -66,7 +66,7 @@ const siteMetadata = {
       metadata: '0',
       // theme example: light, dark, dark_dimmed, dark_high_contrast
       // transparent_dark, preferred_color_scheme, custom
-      theme: 'light',
+      theme: 'preferred_color_scheme',
       // theme when dark mode
       darkTheme: 'transparent_dark',
       // If the theme option above is set to 'custom`
