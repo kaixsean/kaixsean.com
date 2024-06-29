@@ -19,7 +19,7 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com/in/kaixiangchen',
   threads: 'https://www.threads.net/@kaixsean',
   instagram: 'https://www.instagram.com/kaixsean',
-  locale: 'en-US',
+  locale: 'zh-TW',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
