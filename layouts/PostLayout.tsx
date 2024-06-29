@@ -25,8 +25,8 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 interface LayoutProps {
   content: CoreContent<Blog>
   authorDetails: CoreContent<Authors>[]
-  next?: { path: string; title: string }
-  prev?: { path: string; title: string }
+  next?: { path: string; title: string; slug: string }
+  prev?: { path: string; title: string; slug: string }
   children: ReactNode
   body: { raw: string }
 }
@@ -129,7 +129,7 @@ export default function PostLayout({
                       </h2>
                       <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                         <span>←</span>
-                        <Link href={`/${prev.path}`}>{prev.title}</Link>
+                        <Link href={`/posts/${prev.slug}`}>{prev.title}</Link>
                       </div>
                     </div>
                   )}
@@ -140,7 +140,7 @@ export default function PostLayout({
                       </h2>
                       <div className="flex gap-1 text-primary-500 transition-colors hover:text-primary-600 dark:hover:text-primary-400 sm:flex-row-reverse sm:text-right">
                         <span>→</span>
-                        <Link href={`/${next.path}`}>{next.title}</Link>
+                        <Link href={`/posts/${next.slug}`}>{next.title}</Link>
                       </div>
                     </div>
                   )}
