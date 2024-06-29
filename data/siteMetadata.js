@@ -2,14 +2,14 @@
 const siteMetadata = {
   title: 'Kaix',
   author: 'Kaix',
-  headerTitle: 'Kaix',
+  headerTitle: '',
   description: "Kaix's personal blog",
   language: 'zh-tw',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.kaixsean.com',
   siteRepo: 'https://github.com/kaixsean/kaixsean.com',
-  siteLogo: '/static/images/kaix.png',
-  socialBanner: '/static/images/kaix.png',
+  siteLogo: '/static/images/logo.png',
+  socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'me@kaixsean.com',
   github: 'https://github.com/kaixsean',
