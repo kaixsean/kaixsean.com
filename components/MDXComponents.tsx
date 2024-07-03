@@ -5,6 +5,7 @@ import type { MDXComponents } from 'mdx/types'
 import Image from './Image'
 import CustomLink from '@/components/CustomLink'
 import TableWrapper from './TableWrapper'
+import YouTube from '@/components/mdx/YouTube'
 
 export const components: MDXComponents = {
   Image,
@@ -13,4 +14,5 @@ export const components: MDXComponents = {
   pre: Pre,
   table: TableWrapper,
   BlogNewsletterForm,
+  YouTube: YouTube,
 }
