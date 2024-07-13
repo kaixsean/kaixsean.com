@@ -10,10 +10,9 @@ const ContentSecurityPolicy = `
   script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is *.googletagmanager.com *.google-analytics.com;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
-  font-src 'self' data:;
   media-src *.s3.amazonaws.com;
   connect-src *;
-  font-src 'self';
+  font-src 'self' data:;
   frame-src giscus.app *.youtube.com;
 `
 
