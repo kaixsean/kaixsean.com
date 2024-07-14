@@ -108,15 +108,16 @@ export default function PostLayout({
               </div>
             </div>
           </header>
-          <div className="grid-rows-[auto_1fr] divide-y divide-gray-100 pb-8 dark:divide-gray-800 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0">
+          <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0">
+            <dl className="hidden xl:block"></dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
             </div>
-            <aside>
-              <div className="hidden lg:sticky lg:top-24 lg:col-span-1 lg:block">
+            <div>
+              <aside className="hidden xl:sticky xl:top-24 xl:col-span-1 xl:block">
                 <TableOfContents source={raw} />
-              </div>
-            </aside>
+              </aside>
+            </div>
           </div>
           <footer>
             <div>
