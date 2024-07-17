@@ -5,6 +5,7 @@ const headerNavLinks = [
   { href: '/tags/travel', title: 'Travels' },
   // { href: '/projects', title: 'Projects' },
   { href: '/about', title: 'About' },
+  { href: 'https://portfolio.kaixsean.com', title: 'Portfolio' },
 ]
 
 export default headerNavLinks
