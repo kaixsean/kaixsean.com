@@ -1,1 +1,13 @@
-{"life":25,"travel":21,"music":3,"ux":1,"web":2,"golang":1,"blog":9,"macos":1,"git":1,"blockchain":1,"laravel":2}
+{
+  "life": 25,
+  "travel": 22,
+  "music": 3,
+  "ux": 1,
+  "web": 2,
+  "golang": 1,
+  "blog": 9,
+  "macos": 1,
+  "git": 1,
+  "blockchain": 1,
+  "laravel": 2
+}
