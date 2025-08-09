@@ -5623,7 +5623,9 @@ prettier-plugin-tailwindcss@latest:
   integrity sha512-pi2e/+ZygeIqntN+vC573BcW5Cve8zUB0SSAGxqpB4f96boZF4M3phPVoOFCeypwkpRYdi7+jQ5YJJUwrkGUAg==
 
 prettier@^3.0, prettier@^3.0.0, prettier@>=3.0.0:
-  version "3.1.0"
+  version "3.6.2"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-3.6.2.tgz"
+  integrity sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==
 
 probe-image-size@^7.2.3:
   version "7.2.3"
