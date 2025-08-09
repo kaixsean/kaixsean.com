@@ -30,7 +30,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
 
   return (
     <div className="mt-10 flex items-center justify-center">
-      <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm">
+      <nav className="isolate inline-flex -space-x-px rounded-md shadow-xs">
         {!prevPage && (
           <button
             className="relative inline-flex items-center gap-1 rounded-l-md border border-gray-300 bg-white px-3 py-2 pr-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
@@ -91,8 +91,8 @@ export default function ListLayoutWithTags({
   return (
     <>
       <div>
-        <div className="pb-6 pt-6">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <div className="pt-6 pb-6">
+          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
             {title}
           </h1>
         </div>
@@ -120,10 +120,10 @@ export default function ListLayoutWithTags({
                           <div className="flex flex-wrap">
                             {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                           </div>
-                          <h2 className="mt-2 text-lg font-semibold leading-snug tracking-tight dark:text-white">
+                          <h2 className="mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
                             <Link
                               href={`/posts/${slug}`}
-                              className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900"
+                              className="bg-linear-to-r from-green-200 to-green-100 bg-size-[0px_10px] bg-bottom-left bg-no-repeat transition-[background-size] duration-500 group-hover:bg-size-[100%_10px] hover:bg-size-[100%_3px] dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
                             </Link>

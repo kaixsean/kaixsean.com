@@ -8,7 +8,7 @@ import SearchButton from './SearchButton'
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-10 border-b border-gray-950/10 bg-white/70 py-3 backdrop-blur transition-colors dark:border-gray-50/[0.06] dark:bg-gray-950/60">
+    <header className="sticky top-0 z-10 border-b border-gray-950/10 bg-white/70 py-3 backdrop-blur-sm transition-colors dark:border-gray-50/6 dark:bg-gray-950/60">
       <div className="mx-auto max-w-full px-4 sm:px-6 md:max-w-3xl lg:max-w-5xl">
         <div className="flex items-center justify-between">
           <div className="">
@@ -34,7 +34,7 @@ const Header = () => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="hidden font-medium text-gray-600 transition duration-300 ease-in-out hover:text-sky-600 dark:text-gray-100 dark:hover:text-sky-400 sm:block"
+                  className="hidden font-medium text-gray-600 transition duration-300 ease-in-out hover:text-sky-600 sm:block dark:text-gray-100 dark:hover:text-sky-400"
                 >
                   {link.title}
                 </Link>
