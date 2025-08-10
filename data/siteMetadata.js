@@ -13,7 +13,7 @@ const siteMetadata = {
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'me@kaixsean.com',
   github: 'https://github.com/kaixsean',
-  twitter: 'https://twitter.com/kaixsean',
+  twitter: 'https://x.com/kaixsean',
   facebook: 'https://www.facebook.com/profile.php?id=61554790170909',
   youtube: 'https://www.youtube.com/channel/UCyLUlGjJaf9EX_xafXTb3jg',
   linkedin: 'https://www.linkedin.com/in/kaixiangchen',

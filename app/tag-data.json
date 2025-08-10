@@ -1,14 +1,14 @@
 {
   "life": 26,
+  "laravel": 3,
   "travel": 22,
-  "music": 3,
-  "ux": 1,
-  "japan": 7,
-  "web": 1,
-  "golang": 1,
   "blog": 9,
-  "macos": 1,
-  "git": 1,
   "blockchain": 1,
-  "laravel": 3
+  "japan": 7,
+  "git": 1,
+  "macos": 1,
+  "music": 3,
+  "golang": 1,
+  "web": 1,
+  "ux": 1
 }
