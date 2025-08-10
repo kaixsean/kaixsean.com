@@ -104,7 +104,7 @@ export default function ListLayoutWithTags({
                   <li key={path} className="group cursor-pointer py-3">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <div className="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-                        <Link href={`/posts/${slug}`} className="relative block aspect-video">
+                        <Link href={`/blog/${slug}`} className="relative block aspect-video">
                           <Image
                             src={Array.isArray(images) ? images[0] : ''}
                             alt={title}
@@ -121,7 +121,7 @@ export default function ListLayoutWithTags({
                           </div>
                           <h2 className="mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
                             <Link
-                              href={`/posts/${slug}`}
+                              href={`/blog/${slug}`}
                               className="bg-linear-to-r from-green-200 to-green-100 bg-size-[0px_10px] bg-bottom-left bg-no-repeat transition-[background-size] duration-500 group-hover:bg-size-[100%_10px] hover:bg-size-[100%_3px] dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
@@ -130,7 +130,7 @@ export default function ListLayoutWithTags({
                         </div>
                         <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
                           <Link
-                            href={`/posts/${slug}`}
+                            href={`/blog/${slug}`}
                             className="text-gray-500 no-underline dark:text-gray-400"
                           >
                             {summary}
