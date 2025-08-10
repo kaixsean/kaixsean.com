@@ -1,6 +1,6 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
-  { href: '/posts', title: 'Posts' },
+  { href: '/blog', title: 'Posts' },
   { href: '/tags', title: 'Tags' },
   { href: '/tags/travel', title: 'Travels' },
   { href: 'https://buymeacoffee.com/kaixdev', title: 'Support' },
