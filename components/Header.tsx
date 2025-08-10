@@ -1,12 +1,17 @@
-import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo-full.svg'
+import siteMetadata from '@/data/siteMetadata'
 import Link from './Link'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
+  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
+  if (siteMetadata.stickyNav) {
+    headerClass += ' sticky top-0 z-50'
+  }
+
   return (
     <header className="sticky top-0 z-10 border-b border-gray-950/10 bg-white/70 py-3 backdrop-blur-sm transition-colors dark:border-gray-50/6 dark:bg-gray-950/60">
       <div className="mx-auto max-w-full px-4 sm:px-6 md:max-w-3xl lg:max-w-5xl">
