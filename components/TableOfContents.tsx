@@ -6,7 +6,6 @@ import clsx from 'clsx'
 import GithubSlugger from 'github-slugger'
 import { useEffect, useRef, useState } from 'react'
 
-// eslint-disable-next-line no-unused-vars
 type UseIntersectionObserverType = (setActiveId: (id: string) => void) => void
 
 const useIntersectionObserver: UseIntersectionObserverType = (setActiveId) => {
@@ -91,7 +90,7 @@ const TableOfContents = ({ source }: Props) => {
               type="button"
               className={clsx(
                 heading.id === activeId
-                  ? 'font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                  ? 'text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium'
                   : 'font-normal text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200',
                 heading.level === 3 && 'pl-4',
                 'mb-3 text-left text-sm transition-colors hover:underline'

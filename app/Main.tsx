@@ -3,7 +3,6 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Image from 'next/image'
 import { formatDate } from 'pliny/utils/formatDate'
-import NewsletterForm from 'pliny/ui/NewsletterForm'
 
 const MAX_DISPLAY = 14
 
@@ -11,7 +10,7 @@ export default function Home({ posts }) {
   return (
     <>
       <div>
-        <ul className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
+        <ul className="grid gap-10 md:grid-cols-2 lg:gap-10">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, 2).map((post) => {
             const { slug, date, title, summary, tags, images } = post
@@ -38,10 +37,10 @@ export default function Home({ posts }) {
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
-                          <h2 className="mt-2 text-lg font-semibold leading-snug tracking-tight dark:text-white">
+                          <h2 className="mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
                             <Link
                               href={`/posts/${slug}`}
-                              className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900"
+                              className="bg-linear-to-r from-green-200 to-green-100 bg-size-[0px_10px] bg-bottom-left bg-no-repeat transition-[background-size] duration-500 group-hover:bg-size-[100%_10px] hover:bg-size-[100%_3px] dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
                             </Link>
@@ -69,7 +68,7 @@ export default function Home({ posts }) {
             )
           })}
         </ul>
-        <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
+        <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
           {!posts.length && 'No posts found.'}
           {posts.slice(2, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags, images } = post
@@ -96,10 +95,10 @@ export default function Home({ posts }) {
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
-                          <h2 className="mt-2 text-lg font-semibold leading-snug tracking-tight dark:text-white">
+                          <h2 className="mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
                             <Link
                               href={`/posts/${slug}`}
-                              className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-purple-800 dark:to-purple-900"
+                              className="bg-linear-to-r from-green-200 to-green-100 bg-size-[0px_10px] bg-bottom-left bg-no-repeat transition-[background-size] duration-500 group-hover:bg-size-[100%_10px] hover:bg-size-[100%_3px] dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
                             </Link>
