@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Kaix',
   author: 'Kaix',
   headerTitle: '',
-  description: "Kaix's personal blog",
+  description: "Kaix's personal blog，紀錄我的好奇與困惑",
   language: 'zh-tw',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.kaixsean.com',
