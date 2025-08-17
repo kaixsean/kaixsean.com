@@ -148,6 +148,19 @@
   scrollbar-width: none; /* Firefox */
 }
 
+.title-effect {
+  background-size: 0px 10px;
+  background-position: left bottom;
+}
+
+.title-effect:hover {
+  background-size: 100% 3px;
+}
+
+.group:hover .title-effect {
+  background-size: 100% 10px;
+}
+
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
