@@ -38,12 +38,14 @@ export default function Home({ posts }) {
                             ))}
                           </div>
                           <h2 className="mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="bg-linear-to-r from-green-200 to-green-100 bg-size-[0px_10px] bg-bottom-left bg-no-repeat transition-[background-size] duration-500 group-hover:bg-size-[100%_10px] hover:bg-size-[100%_3px] dark:from-purple-800 dark:to-purple-900"
-                            >
-                              {title}
-                            </Link>
+                            <div className="group">
+                              <Link
+                                href={`/blog/${slug}`}
+                                className="title-effect bg-linear-to-r from-green-200 to-green-100 bg-no-repeat transition-[background-size] duration-500 dark:from-purple-800 dark:to-purple-900"
+                              >
+                                {title}
+                              </Link>
+                            </div>
                           </h2>
                         </div>
                         <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
@@ -98,7 +100,7 @@ export default function Home({ posts }) {
                           <h2 className="mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
                             <Link
                               href={`/blog/${slug}`}
-                              className="bg-linear-to-r from-green-200 to-green-100 bg-size-[0px_10px] bg-bottom-left bg-no-repeat transition-[background-size] duration-500 group-hover:bg-size-[100%_10px] hover:bg-size-[100%_3px] dark:from-purple-800 dark:to-purple-900"
+                              className="title-effect bg-linear-to-r from-green-200 to-green-100 bg-no-repeat transition-[background-size] duration-500 dark:from-purple-800 dark:to-purple-900"
                             >
                               {title}
                             </Link>
