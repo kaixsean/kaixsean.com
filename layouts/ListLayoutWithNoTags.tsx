@@ -117,7 +117,9 @@ export default function ListLayoutWithTags({
                       <div className="space-y-2">
                         <div className="mt-5">
                           <div className="flex flex-wrap">
-                            {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                            {tags?.map((tag) => (
+                              <Tag key={tag} text={tag} />
+                            ))}
                           </div>
                           <h2 className="mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
                             <Link
