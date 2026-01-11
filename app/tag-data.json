@@ -1,9 +1,10 @@
 {
+  "books": 1,
   "life": 26,
+  "laravel": 3,
   "travel": 22,
-  "music": 3,
+  "blog": 9,
   "dev": 6,
   "japan": 7,
-  "blog": 9,
-  "laravel": 3
+  "music": 3
 }
