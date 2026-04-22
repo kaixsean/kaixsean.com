@@ -11,7 +11,7 @@ export default function Home({ posts }) {
     <>
       <div>
         <ul className="grid gap-10 md:grid-cols-2 lg:gap-10">
-          {!posts.length && 'No posts found.'}
+          {!posts.length && <li>No posts found.</li>}
           {posts.slice(0, 2).map((post) => {
             const { slug, date, title, summary, tags, images } = post
             return (
@@ -37,15 +37,13 @@ export default function Home({ posts }) {
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
-                          <h2 className="mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
-                            <div className="group">
-                              <Link
-                                href={`/blog/${slug}`}
-                                className="title-effect bg-linear-to-r from-green-200 to-green-100 bg-no-repeat transition-[background-size] duration-500 dark:from-purple-800 dark:to-purple-900"
-                              >
-                                {title}
-                              </Link>
-                            </div>
+                          <h2 className="group mt-2 text-lg leading-snug font-semibold tracking-tight dark:text-white">
+                            <Link
+                              href={`/blog/${slug}`}
+                              className="title-effect bg-linear-to-r from-green-200 to-green-100 bg-no-repeat transition-[background-size] duration-500 dark:from-purple-800 dark:to-purple-900"
+                            >
+                              {title}
+                            </Link>
                           </h2>
                         </div>
                         <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
@@ -71,7 +69,7 @@ export default function Home({ posts }) {
           })}
         </ul>
         <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
-          {!posts.length && 'No posts found.'}
+          {!posts.length && <li>No posts found.</li>}
           {posts.slice(2, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags, images } = post
             return (
