@@ -9,6 +9,7 @@ const MAX_DISPLAY = 14
 export default function Home({ posts }) {
   return (
     <>
+      <h1 className="sr-only">{siteMetadata.title}</h1>
       <div>
         <ul className="grid gap-10 md:grid-cols-2 lg:gap-10">
           {!posts.length && <li>No posts found.</li>}
